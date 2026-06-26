@@ -7,7 +7,7 @@ import { Link } from '@/lib/i18n/navigation';
 import type { Community } from '@/data/types';
 import type { Locale } from '@/lib/i18n/routing';
 import { formatPriceShort } from '@/lib/format';
-import { SkylinePlaceholder } from '@/components/ui/skyline-placeholder';
+import { MediaImage } from '@/components/ui/media-image';
 
 export function CommunityCard({
   community,
@@ -32,9 +32,14 @@ export function CommunityCard({
         className="group relative block h-72 overflow-hidden rounded-card border border-gold/15 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-gold/45 hover:shadow-card-hover"
       >
         <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-110">
-          <SkylinePlaceholder hue={community.hue} />
+          <MediaImage
+            src={community.image}
+            alt={community.name}
+            hue={community.hue}
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
 
         <div className="relative flex h-full flex-col justify-end p-6">
           <div className="flex items-center justify-between">

@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { MessageCircle, CalendarCheck, Phone } from 'lucide-react';
 import type { Agent, Property } from '@/data/types';
@@ -21,8 +22,14 @@ export function AdvisorCard({
     <div className="card-surface flex flex-col gap-5 p-6">
       <span className="eyebrow text-gold/70">{t('yourAdvisor')}</span>
       <div className="flex items-center gap-4">
-        <span className="grid h-16 w-16 shrink-0 place-items-center rounded-full bg-burgundy-gold text-xl font-semibold text-warm">
-          {agent.initials}
+        <span className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full border border-gold/30 bg-burgundy-gold">
+          <Image
+            src={agent.avatar}
+            alt={agent.name}
+            fill
+            sizes="64px"
+            className="object-cover object-top"
+          />
         </span>
         <div>
           <p className="font-serif text-xl text-warm">{agent.name}</p>

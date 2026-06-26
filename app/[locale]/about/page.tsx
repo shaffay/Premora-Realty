@@ -7,7 +7,7 @@ import { StatsRow } from '@/components/sections/stats-row';
 import { Reveal, RevealStagger } from '@/components/ui/reveal';
 import { TeamGrid } from '@/components/sections/team-grid';
 import { Icon } from '@/components/ui/icon';
-import { SkylinePlaceholder } from '@/components/ui/skyline-placeholder';
+import { MediaImage } from '@/components/ui/media-image';
 import { CtaBand } from '@/components/sections/cta-band';
 import { values } from '@/data/site';
 
@@ -51,7 +51,12 @@ export default function AboutPage({
           delay={0.1}
           className="relative aspect-[4/3] overflow-hidden rounded-card border border-gold/15"
         >
-          <SkylinePlaceholder hue={150} label="TEAM · OFFICE" intensity="rich" />
+          <MediaImage
+            src="/images/living2.jpg"
+            alt="The Premora Realty office lounge in DIFC, Dubai"
+            hue={150}
+            sizes="(max-width: 1024px) 100vw, 50vw"
+          />
         </Reveal>
       </Container>
 

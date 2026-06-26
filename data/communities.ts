@@ -11,6 +11,7 @@ const raw: Community[] = [
     hue: 150,
     lat: 25.1972,
     lng: 55.2744,
+    image: '/images/burj-khalifa.jpg',
   },
   {
     slug: 'dubai-marina',
@@ -22,6 +23,7 @@ const raw: Community[] = [
     hue: 200,
     lat: 25.0805,
     lng: 55.1403,
+    image: '/images/marina.jpg',
   },
   {
     slug: 'palm-jumeirah',
@@ -33,6 +35,7 @@ const raw: Community[] = [
     hue: 35,
     lat: 25.1124,
     lng: 55.139,
+    image: '/images/palm.jpg',
   },
   {
     slug: 'jvc',
@@ -44,6 +47,7 @@ const raw: Community[] = [
     hue: 170,
     lat: 25.059,
     lng: 55.209,
+    image: '/images/apt-building.jpg',
   },
   {
     slug: 'business-bay',
@@ -55,6 +59,7 @@ const raw: Community[] = [
     hue: 280,
     lat: 25.185,
     lng: 55.265,
+    image: '/images/dubai-aerial.jpg',
   },
   {
     slug: 'dubai-hills',
@@ -66,6 +71,7 @@ const raw: Community[] = [
     hue: 130,
     lat: 25.11,
     lng: 55.248,
+    image: '/images/house-ext.jpg',
   },
   {
     slug: 'emaar-beachfront',
@@ -77,6 +83,7 @@ const raw: Community[] = [
     hue: 205,
     lat: 25.095,
     lng: 55.145,
+    image: '/images/house-modern2.jpg',
   },
   {
     slug: 'emirates-hills',
@@ -88,6 +95,7 @@ const raw: Community[] = [
     hue: 45,
     lat: 25.066,
     lng: 55.162,
+    image: '/images/house-modern.jpg',
   },
   {
     slug: 'creek-harbour',
@@ -99,6 +107,7 @@ const raw: Community[] = [
     hue: 190,
     lat: 25.203,
     lng: 55.353,
+    image: '/images/apt-building2.jpg',
   },
   {
     slug: 'city-walk',
@@ -110,6 +119,7 @@ const raw: Community[] = [
     hue: 25,
     lat: 25.205,
     lng: 55.262,
+    image: '/images/loft.jpg',
   },
 ];
 

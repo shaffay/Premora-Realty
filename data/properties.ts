@@ -30,6 +30,7 @@ const raw: Property[] = [
     lat: 25.1972,
     lng: 55.2744,
     hue: 150,
+    image: '/images/living.jpg',
   },
   {
     id: 'p2',
@@ -60,6 +61,7 @@ const raw: Property[] = [
     lat: 25.0805,
     lng: 55.1403,
     hue: 200,
+    image: '/images/marina.jpg',
   },
   {
     id: 'p3',
@@ -90,6 +92,7 @@ const raw: Property[] = [
     lat: 25.1124,
     lng: 55.139,
     hue: 35,
+    image: '/images/villa.jpg',
   },
   {
     id: 'p4',
@@ -120,6 +123,7 @@ const raw: Property[] = [
     lat: 25.059,
     lng: 55.209,
     hue: 170,
+    image: '/images/apt-interior2.jpg',
   },
   {
     id: 'p5',
@@ -150,6 +154,7 @@ const raw: Property[] = [
     lat: 25.185,
     lng: 55.265,
     hue: 280,
+    image: '/images/penthouse.jpg',
   },
   {
     id: 'p6',
@@ -180,6 +185,7 @@ const raw: Property[] = [
     lat: 25.11,
     lng: 55.248,
     hue: 130,
+    image: '/images/house-garden.jpg',
   },
   {
     id: 'p7',
@@ -210,6 +216,7 @@ const raw: Property[] = [
     lat: 25.095,
     lng: 55.145,
     hue: 205,
+    image: '/images/house-modern2.jpg',
   },
   {
     id: 'p8',
@@ -240,6 +247,7 @@ const raw: Property[] = [
     lat: 25.066,
     lng: 55.162,
     hue: 45,
+    image: '/images/house-modern.jpg',
   },
   {
     id: 'p9',
@@ -270,6 +278,7 @@ const raw: Property[] = [
     lat: 25.203,
     lng: 55.353,
     hue: 190,
+    image: '/images/apt-building2.jpg',
   },
   {
     id: 'p10',
@@ -300,6 +309,7 @@ const raw: Property[] = [
     lat: 25.205,
     lng: 55.262,
     hue: 25,
+    image: '/images/loft.jpg',
   },
 ];
 

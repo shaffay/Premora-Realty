@@ -7,7 +7,7 @@ import { Play, ArrowRight, ChevronDown } from 'lucide-react';
 import { Link } from '@/lib/i18n/navigation';
 import { Container } from '@/components/ui/container';
 import { Button } from '@/components/ui/button';
-import { SkylinePlaceholder } from '@/components/ui/skyline-placeholder';
+import { MediaImage } from '@/components/ui/media-image';
 import { HeroSearch } from './hero-search';
 
 export function Hero() {
@@ -27,11 +27,17 @@ export function Hero() {
       className="relative flex min-h-[92vh] items-center overflow-hidden pt-28"
       aria-labelledby="hero-heading"
     >
-      <motion.div style={{ y }} className="absolute inset-0 -z-10">
-        <SkylinePlaceholder hue={158} intensity="rich" className="h-[120%]" />
+      <motion.div style={{ y }} className="absolute inset-0 -z-10 h-[120%]">
+        <MediaImage
+          src="/images/hero-dubai.jpg"
+          alt="The Dubai skyline at dusk with the Burj Khalifa"
+          hue={158}
+          priority
+          sizes="100vw"
+        />
       </motion.div>
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-base/60 via-base/30 to-base" />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-burgundy-deep/40 via-transparent to-primary-deep/30" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-base/75 via-base/45 to-base" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-burgundy-deep/55 via-transparent to-primary-deep/45" />
 
       <Container className="relative w-full">
         <motion.div style={{ opacity }} className="max-w-3xl">

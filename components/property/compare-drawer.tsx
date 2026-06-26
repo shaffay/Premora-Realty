@@ -9,7 +9,7 @@ import { useHasMounted } from '@/hooks/use-has-mounted';
 import { properties as allProperties } from '@/data/properties';
 import { formatPrice } from '@/lib/format';
 import type { Locale } from '@/lib/i18n/routing';
-import { SkylinePlaceholder } from '@/components/ui/skyline-placeholder';
+import { MediaImage } from '@/components/ui/media-image';
 import { Button } from '@/components/ui/button';
 
 export function CompareDrawer() {
@@ -62,7 +62,12 @@ export function CompareDrawer() {
                         <X className="h-3 w-3" />
                       </button>
                       <div className="relative h-16 w-full">
-                        <SkylinePlaceholder hue={p.hue} showSkyline={false} />
+                        <MediaImage
+                          src={p.image}
+                          alt={p.title}
+                          hue={p.hue}
+                          sizes="160px"
+                        />
                       </div>
                       <div className="p-2">
                         <p className="truncate text-xs font-medium text-warm">

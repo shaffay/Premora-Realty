@@ -9,6 +9,7 @@ const raw: Agent[] = [
     languages: ['Arabic', 'English', 'French'],
     phone: '+971501234567',
     whatsapp: '971501234567',
+    avatar: '/images/agent-layla.jpg',
   },
   {
     id: 'a2',
@@ -18,6 +19,7 @@ const raw: Agent[] = [
     languages: ['Arabic', 'English'],
     phone: '+971501234568',
     whatsapp: '971501234568',
+    avatar: '/images/agent-omar.jpg',
   },
   {
     id: 'a3',
@@ -27,6 +29,7 @@ const raw: Agent[] = [
     languages: ['English', 'Urdu', 'Hindi'],
     phone: '+971501234569',
     whatsapp: '971501234569',
+    avatar: '/images/agent-sara.jpg',
   },
   {
     id: 'a4',
@@ -36,6 +39,7 @@ const raw: Agent[] = [
     languages: ['English', 'Spanish', 'Portuguese'],
     phone: '+971501234570',
     whatsapp: '971501234570',
+    avatar: '/images/agent-daniel.jpg',
   },
 ];
 

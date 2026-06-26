@@ -44,8 +44,10 @@ export const PropertySchema = z.object({
   agentId: z.string(),
   lat: z.number(),
   lng: z.number(),
-  /** Hue seed (0-360) for the branded gradient placeholder */
+  /** Hue seed (0-360) for the branded gradient placeholder shown while the image loads */
   hue: z.number().min(0).max(360),
+  /** Path to the hero photo for this listing (under /public). */
+  image: z.string(),
 });
 
 export type Property = z.infer<typeof PropertySchema>;
@@ -58,6 +60,7 @@ export const AgentSchema = z.object({
   languages: z.array(z.string()),
   phone: z.string(),
   whatsapp: z.string(),
+  avatar: z.string(),
 });
 
 export type Agent = z.infer<typeof AgentSchema>;
@@ -71,6 +74,8 @@ export const CommunitySchema = z.object({
   hue: z.number().min(0).max(360),
   lat: z.number(),
   lng: z.number(),
+  /** Path to the community photo (under /public). */
+  image: z.string(),
 });
 
 export type Community = z.infer<typeof CommunitySchema>;

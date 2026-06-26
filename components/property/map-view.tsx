@@ -9,7 +9,7 @@ import type { Property } from '@/data/types';
 import type { Locale } from '@/lib/i18n/routing';
 import { formatPrice } from '@/lib/format';
 import { MapFallback } from './map-fallback';
-import { SkylinePlaceholder } from '@/components/ui/skyline-placeholder';
+import { MediaImage } from '@/components/ui/media-image';
 import { cn } from '@/lib/utils';
 
 const hasMapKey = Boolean(process.env.NEXT_PUBLIC_MAPTILER_KEY);
@@ -47,7 +47,12 @@ export function MapView({ properties }: { properties: Property[] }) {
               )}
             >
               <div className="relative h-24 w-28 shrink-0 overflow-hidden rounded-xl">
-                <SkylinePlaceholder hue={p.hue} showSkyline={false} />
+                <MediaImage
+                  src={p.image}
+                  alt={p.title}
+                  hue={p.hue}
+                  sizes="112px"
+                />
               </div>
               <div className="flex min-w-0 flex-1 flex-col">
                 <Link

@@ -3,20 +3,25 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import type { Property } from '@/data/types';
-import { SkylinePlaceholder } from '@/components/ui/skyline-placeholder';
+import { MediaImage } from '@/components/ui/media-image';
 import { FavoriteButton } from './favorite-button';
 import { cn } from '@/lib/utils';
 
-const VIEWS = ['Hero', 'Living', 'Kitchen', 'Master Suite', 'View'];
+// Shared interior shots used alongside each listing's hero photo.
+const INTERIORS = [
+  { src: '/images/living2.jpg', label: 'Living' },
+  { src: '/images/kitchen.jpg', label: 'Kitchen' },
+  { src: '/images/bedroom.jpg', label: 'Master Suite' },
+  { src: '/images/apt-interior.jpg', label: 'Reception' },
+];
 
 export function PropertyGallery({ property }: { property: Property }) {
   const [active, setActive] = useState(0);
 
-  // Vary the hue slightly per "photo" to differentiate frames.
-  const frames = VIEWS.map((label, i) => ({
-    label: `${property.typeLabel} · ${label}`,
-    hue: (property.hue + i * 14) % 360,
-  }));
+  const frames = [
+    { src: property.image, label: `${property.typeLabel} · Feature` },
+    ...INTERIORS,
+  ];
 
   return (
     <div className="flex flex-col gap-3">
@@ -28,10 +33,12 @@ export function PropertyGallery({ property }: { property: Property }) {
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
           className="absolute inset-0"
         >
-          <SkylinePlaceholder
-            hue={frames[active]!.hue}
-            label={frames[active]!.label}
-            intensity="rich"
+          <MediaImage
+            src={frames[active]!.src}
+            alt={`${property.title} — ${frames[active]!.label}`}
+            hue={property.hue}
+            priority
+            sizes="(max-width: 1024px) 100vw, 60vw"
           />
         </motion.div>
         <span className="absolute start-4 top-4 rounded-full bg-burgundy-gold px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-wider text-warm">
@@ -57,7 +64,12 @@ export function PropertyGallery({ property }: { property: Property }) {
                 : 'border-gold/10 opacity-70 hover:opacity-100',
             )}
           >
-            <SkylinePlaceholder hue={f.hue} showSkyline={i % 2 === 0} />
+            <MediaImage
+              src={f.src}
+              alt={f.label}
+              hue={property.hue}
+              sizes="20vw"
+            />
           </button>
         ))}
       </div>

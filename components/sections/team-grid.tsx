@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { RevealStagger, revealItem } from '@/components/ui/reveal';
-import { SkylinePlaceholder } from '@/components/ui/skyline-placeholder';
+import { MediaImage } from '@/components/ui/media-image';
 import { agents } from '@/data/agents';
 
 export function TeamGrid() {
@@ -15,11 +15,14 @@ export function TeamGrid() {
           className="group flex flex-col overflow-hidden rounded-card border border-gold/15 bg-card transition hover:-translate-y-1.5 hover:border-gold/40 hover:shadow-card"
         >
           <div className="relative aspect-[4/5] overflow-hidden">
-            <SkylinePlaceholder
+            <MediaImage
+              src={a.avatar}
+              alt={a.name}
               hue={(a.name.length * 30) % 360}
-              showSkyline={false}
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+              imageClassName="object-cover object-top transition duration-500 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
             <span className="absolute bottom-3 start-3 grid h-12 w-12 place-items-center rounded-full bg-burgundy-gold font-semibold text-warm">
               {a.initials}
             </span>

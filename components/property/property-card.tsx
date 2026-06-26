@@ -7,7 +7,7 @@ import { Link } from '@/lib/i18n/navigation';
 import type { Property } from '@/data/types';
 import type { Locale } from '@/lib/i18n/routing';
 import { formatPrice, formatPricePerSqft } from '@/lib/format';
-import { SkylinePlaceholder } from '@/components/ui/skyline-placeholder';
+import { MediaImage } from '@/components/ui/media-image';
 import { FavoriteButton } from './favorite-button';
 import { CompareButton } from './compare-button';
 import { cn } from '@/lib/utils';
@@ -49,9 +49,14 @@ export function PropertyCard({
       >
         <div className="relative aspect-[4/3] overflow-hidden">
           <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-105">
-            <SkylinePlaceholder hue={property.hue} />
+            <MediaImage
+              src={property.image}
+              alt={`${property.title} in ${property.community}`}
+              hue={property.hue}
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            />
           </div>
-          <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
 
           <span
             className={cn(

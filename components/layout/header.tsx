@@ -79,10 +79,10 @@ export function Header() {
           <div className="flex items-center gap-2.5">
             <a
               href={`tel:${tb('phone').replace(/\s/g, '')}`}
-              className="hidden items-center gap-2 text-sm text-body transition hover:text-warm xl:flex"
+              className="hidden items-center gap-2 whitespace-nowrap text-sm text-body transition hover:text-warm xl:flex"
             >
-              <Phone className="h-3.5 w-3.5 text-gold" />
-              {tb('phone')}
+              <Phone className="h-3.5 w-3.5 shrink-0 text-gold" />
+              <span dir="ltr">{tb('phone')}</span>
             </a>
             <LocaleSwitcher className="hidden sm:flex" />
             <SavedLink />
