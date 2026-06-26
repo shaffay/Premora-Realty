@@ -63,10 +63,25 @@ export function Hero() {
 
       <Container className="relative w-full">
         <motion.div style={{ opacity }} className="max-w-3xl">
+          <motion.div
+            initial={{ opacity: 0, y: 10, scale: 0.96 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            className="mb-6"
+          >
+            <Image
+              src="/images/premora-monogram.png"
+              alt="Premora Realty monogram"
+              width={120}
+              height={98}
+              priority
+              className="h-20 w-auto drop-shadow-[0_10px_30px_rgba(0,0,0,0.55)] sm:h-24"
+            />
+          </motion.div>
           <motion.span
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6, delay: 0.08 }}
             className="eyebrow"
           >
             {t('eyebrow')}
