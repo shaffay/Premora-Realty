@@ -5,9 +5,9 @@ import { useTranslations } from 'next-intl';
 import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion';
 import { Play, ArrowRight, ChevronDown } from 'lucide-react';
 import { Link } from '@/lib/i18n/navigation';
+import Image from 'next/image';
 import { Container } from '@/components/ui/container';
 import { Button } from '@/components/ui/button';
-import { MediaImage } from '@/components/ui/media-image';
 import { HeroSearch } from './hero-search';
 
 export function Hero() {
@@ -27,17 +27,44 @@ export function Hero() {
       className="relative flex min-h-[92vh] items-center overflow-hidden pt-28"
       aria-labelledby="hero-heading"
     >
-      <motion.div style={{ y }} className="absolute inset-0 -z-10 h-[120%]">
-        <MediaImage
-          src="/images/hero-dubai.jpg"
-          alt="The Dubai skyline at dusk with the Burj Khalifa"
-          hue={158}
+      {/* Premium dark base + atmospheric burgundy / gold washes */}
+      <div className="absolute inset-0 -z-20 bg-base" />
+      <div
+        className="absolute inset-0 -z-20"
+        style={{
+          background:
+            'radial-gradient(85% 60% at 18% 12%, rgba(138,31,61,.24), transparent 60%), radial-gradient(70% 55% at 88% 18%, rgba(203,163,92,.12), transparent 60%)',
+        }}
+      />
+
+      {/* Skyline silhouette anchored to the horizon, with a gold glow rising behind it */}
+      <motion.div
+        style={{ y }}
+        className="absolute inset-x-0 bottom-0 -z-10 h-[60%] sm:h-[64%]"
+      >
+        <div
+          className="absolute inset-x-0 bottom-0 h-3/4"
+          style={{
+            background:
+              'radial-gradient(70% 120% at 50% 100%, rgba(203,163,92,.26), rgba(138,31,61,.10) 45%, transparent 72%)',
+          }}
+        />
+        <Image
+          src="/images/dubai-skyline.png"
+          alt="The Dubai skyline featuring the Burj Khalifa"
+          fill
           priority
           sizes="100vw"
+          className="object-cover object-bottom"
         />
+        {/* horizon glow line */}
+        <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
+        {/* fade the skyline base seamlessly into the page */}
+        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-base to-transparent" />
       </motion.div>
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-base/75 via-base/45 to-base" />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-burgundy-deep/55 via-transparent to-primary-deep/45" />
+
+      {/* gentle top vignette so the headline reads cleanly */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-base/40 via-transparent to-transparent" />
 
       <Container className="relative w-full">
         <motion.div style={{ opacity }} className="max-w-3xl">
