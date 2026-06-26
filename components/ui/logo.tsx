@@ -33,8 +33,8 @@ export function Logo({
           <span className="font-serif text-lg font-semibold tracking-[0.22em] text-warm">
             PREMORA
           </span>
-          <span className="mt-1 text-[0.58rem] font-medium tracking-[0.34em] text-gold/85">
-            CLARITY AND CARE
+          <span className="mt-1 text-[0.62rem] font-semibold tracking-[0.52em] text-gold/85">
+            REALTY
           </span>
         </span>
       )}
