@@ -67,7 +67,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 10, scale: 0.96 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="mb-6"
+            className="mb-6 flex items-center gap-4"
           >
             <Image
               src="/images/premora-monogram.png"
@@ -75,8 +75,16 @@ export function Hero() {
               width={120}
               height={98}
               priority
-              className="h-28 w-auto drop-shadow-[0_10px_30px_rgba(0,0,0,0.55)] sm:h-32"
+              className="h-24 w-auto drop-shadow-[0_10px_30px_rgba(0,0,0,0.55)] sm:h-28"
             />
+            <span className="flex flex-col leading-none">
+              <span className="font-serif text-3xl font-semibold tracking-[0.18em] text-warm sm:text-4xl">
+                PREMORA
+              </span>
+              <span className="mt-2 text-sm font-semibold tracking-[0.5em] text-gold sm:text-base">
+                REALTY
+              </span>
+            </span>
           </motion.div>
           <motion.span
             initial={{ opacity: 0, y: 12 }}
