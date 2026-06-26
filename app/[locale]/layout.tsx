@@ -89,6 +89,11 @@ export default async function LocaleLayout({
     >
       <body className="min-h-screen bg-base antialiased">
         <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var p=new URLSearchParams(location.search).get('theme');if(p==='light'||p==='dark'){localStorage.setItem('premora-theme',p)}if(localStorage.getItem('premora-theme')==='light'){document.documentElement.classList.add('light')}else{document.documentElement.classList.remove('light')}}catch(e){}})();`,
+          }}
+        />
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(organizationJsonLd(SITE_URL)),

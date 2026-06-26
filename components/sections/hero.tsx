@@ -24,11 +24,11 @@ export function Hero() {
   return (
     <section
       ref={ref}
-      className="relative flex min-h-[92vh] items-center overflow-hidden pt-28"
+      className="on-dark relative flex min-h-[92vh] items-center overflow-hidden pt-28"
       aria-labelledby="hero-heading"
     >
       {/* Full-bleed warm golden-hour Dubai skyline */}
-      <div className="absolute inset-0 -z-20 bg-base" />
+      <div className="absolute inset-0 -z-20 bg-[#0a130e]" />
       <motion.div style={{ y }} className="absolute inset-0 -z-10 h-[115%]">
         <Image
           src="/images/hero-skyline.webp"
@@ -41,9 +41,9 @@ export function Hero() {
       </motion.div>
 
       {/* Legibility + warmth: dark on the left for the headline, skyline revealed on the right */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-base via-base/70 to-base/10" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#0a130e] via-[#0a130e]/70 to-[#0a130e]/10" />
       {/* Deepen the bottom for the search bar and the top for the glass nav */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-base via-transparent to-base/45" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#0a130e] via-transparent to-[#0a130e]/45" />
       {/* Brand atmosphere: burgundy upper-left, warm gold glow over the skyline */}
       <div
         className="absolute inset-0 -z-10"
@@ -75,7 +75,7 @@ export function Hero() {
               width={120}
               height={98}
               priority
-              className="h-20 w-auto drop-shadow-[0_10px_30px_rgba(0,0,0,0.55)] sm:h-24"
+              className="h-28 w-auto drop-shadow-[0_10px_30px_rgba(0,0,0,0.55)] sm:h-32"
             />
           </motion.div>
           <motion.span

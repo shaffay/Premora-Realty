@@ -8,6 +8,7 @@ import { Link, usePathname } from '@/lib/i18n/navigation';
 import { mainNav } from './nav-config';
 import { Logo } from '@/components/ui/logo';
 import { LocaleSwitcher } from './locale-switcher';
+import { ThemeToggle } from './theme-toggle';
 import { SavedLink } from './saved-link';
 import { BookConsultationButton } from './book-consultation-button';
 import { Container } from '@/components/ui/container';
@@ -85,6 +86,7 @@ export function Header() {
               <span dir="ltr">{tb('phone')}</span>
             </a>
             <LocaleSwitcher className="hidden sm:flex" />
+            <ThemeToggle className="hidden sm:grid" />
             <SavedLink />
             <BookConsultationButton
               variant="gold"
@@ -151,7 +153,10 @@ export function Header() {
                 ))}
               </nav>
               <div className="flex flex-col gap-3 border-t border-gold/15 p-5">
-                <LocaleSwitcher />
+                <div className="flex items-center justify-between gap-3">
+                  <LocaleSwitcher />
+                  <ThemeToggle />
+                </div>
                 <BookConsultationButton
                   variant="gold"
                   size="lg"

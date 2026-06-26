@@ -10,11 +10,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Surfaces
-        base: '#0a130e',
-        panel: '#0e1b14',
-        card: '#0e1b14',
-        deeper: '#081109',
+        // Surfaces — themeable via CSS variables (see globals.css :root / html.light)
+        base: 'rgb(var(--c-base) / <alpha-value>)',
+        panel: 'rgb(var(--c-panel) / <alpha-value>)',
+        card: 'rgb(var(--c-card) / <alpha-value>)',
+        deeper: 'rgb(var(--c-deeper) / <alpha-value>)',
         // Primary green / CTA
         primary: {
           DEFAULT: '#1e5b40',
@@ -35,12 +35,12 @@ const config: Config = {
           bright: '#a8294a',
           deep: '#4a1020',
         },
-        // Text
-        warm: '#f3efe6',
-        ink: '#eef2ee',
-        body: '#c4ccc4',
-        muted: '#9fb0a6',
-        dim: '#7d8d83',
+        // Text — themeable
+        warm: 'rgb(var(--c-warm) / <alpha-value>)',
+        ink: 'rgb(var(--c-ink) / <alpha-value>)',
+        body: 'rgb(var(--c-body) / <alpha-value>)',
+        muted: 'rgb(var(--c-muted) / <alpha-value>)',
+        dim: 'rgb(var(--c-dim) / <alpha-value>)',
         // Utility
         whatsapp: '#25d366',
       },

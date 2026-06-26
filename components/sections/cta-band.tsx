@@ -12,7 +12,7 @@ export function CtaBand() {
   return (
     <section className="relative py-12">
       <Container>
-        <Reveal className="relative overflow-hidden rounded-[28px] border border-gold/25 bg-gradient-to-br from-primary-deep via-deeper to-burgundy-deep/70 px-8 py-16 text-center shadow-card-hover sm:px-16">
+        <Reveal className="on-dark relative overflow-hidden rounded-[28px] border border-gold/25 bg-gradient-to-br from-[#102a1e] via-[#081109] to-[#4a1020]/80 px-8 py-16 text-center shadow-card-hover sm:px-16">
           <div className="pointer-events-none absolute inset-0 bg-radial-glow opacity-80" />
           <div className="skyline-dots pointer-events-none absolute inset-0 opacity-20" />
           <div className="relative mx-auto flex max-w-2xl flex-col items-center gap-6">

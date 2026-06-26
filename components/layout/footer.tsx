@@ -13,7 +13,7 @@ export function Footer() {
   const tn = useTranslations('nav');
 
   return (
-    <footer className="relative mt-24 border-t border-gold/15 bg-deeper">
+    <footer className="on-dark relative mt-24 border-t border-gold/15 bg-[#081109]">
       <div className="pointer-events-none absolute inset-0 bg-radial-glow opacity-60" />
       <Container className="relative grid gap-12 py-16 lg:grid-cols-12">
         <div className="flex flex-col gap-5 lg:col-span-4">
