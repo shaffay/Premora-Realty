@@ -27,44 +27,39 @@ export function Hero() {
       className="relative flex min-h-[92vh] items-center overflow-hidden pt-28"
       aria-labelledby="hero-heading"
     >
-      {/* Premium dark base + atmospheric burgundy / gold washes */}
+      {/* Full-bleed warm golden-hour Dubai skyline */}
       <div className="absolute inset-0 -z-20 bg-base" />
-      <div
-        className="absolute inset-0 -z-20"
-        style={{
-          background:
-            'radial-gradient(85% 60% at 18% 12%, rgba(138,31,61,.24), transparent 60%), radial-gradient(70% 55% at 88% 18%, rgba(203,163,92,.12), transparent 60%)',
-        }}
-      />
-
-      {/* Skyline silhouette anchored to the horizon, with a gold glow rising behind it */}
-      <motion.div
-        style={{ y }}
-        className="absolute inset-x-0 bottom-0 -z-10 h-[60%] sm:h-[64%]"
-      >
-        <div
-          className="absolute inset-x-0 bottom-0 h-3/4"
-          style={{
-            background:
-              'radial-gradient(70% 120% at 50% 100%, rgba(203,163,92,.26), rgba(138,31,61,.10) 45%, transparent 72%)',
-          }}
-        />
+      <motion.div style={{ y }} className="absolute inset-0 -z-10 h-[115%]">
         <Image
-          src="/images/dubai-skyline.png"
-          alt="The Dubai skyline featuring the Burj Khalifa"
+          src="/images/hero-skyline.jpg"
+          alt="The Dubai skyline at golden hour with the Burj Khalifa"
           fill
           priority
           sizes="100vw"
-          className="object-cover object-bottom"
+          className="object-cover object-center"
         />
-        {/* horizon glow line */}
-        <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
-        {/* fade the skyline base seamlessly into the page */}
-        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-base to-transparent" />
       </motion.div>
 
-      {/* gentle top vignette so the headline reads cleanly */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-base/40 via-transparent to-transparent" />
+      {/* Legibility + warmth: dark on the left for the headline, skyline revealed on the right */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-base via-base/70 to-base/10" />
+      {/* Deepen the bottom for the search bar and the top for the glass nav */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-base via-transparent to-base/45" />
+      {/* Brand atmosphere: burgundy upper-left, warm gold glow over the skyline */}
+      <div
+        className="absolute inset-0 -z-10"
+        style={{
+          background:
+            'radial-gradient(70% 60% at 12% 14%, rgba(138,31,61,.28), transparent 60%), radial-gradient(55% 70% at 78% 42%, rgba(203,163,92,.18), transparent 62%)',
+        }}
+      />
+      {/* Subtle cinematic vignette */}
+      <div
+        className="absolute inset-0 -z-10"
+        style={{
+          background:
+            'radial-gradient(120% 120% at 50% 40%, transparent 55%, rgba(8,17,9,.55) 100%)',
+        }}
+      />
 
       <Container className="relative w-full">
         <motion.div style={{ opacity }} className="max-w-3xl">
