@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
 import { ConsultationForm } from '@/components/forms/consultation-form';
@@ -9,6 +10,14 @@ import { useUi } from '@/store/ui';
 export function ConsultationModal() {
   const t = useTranslations('consultation');
   const { consultationOpen, consultationContext, closeConsultation } = useUi();
+  const openConsultation = useUi((s) => s.openConsultation);
+
+  // Deep link: any URL with ?consult=1 opens the consultation modal on load.
+  useEffect(() => {
+    if (new URLSearchParams(window.location.search).get('consult') === '1') {
+      openConsultation();
+    }
+  }, [openConsultation]);
 
   return (
     <Dialog
