@@ -1,0 +1,121 @@
+{
+  "brand": {
+    "name": "PREMORA",
+    "tagline": "CLARITY AND CARE",
+    "phone": "+971 50 123 4567"
+  },
+  "nav": {
+    "home": "Home",
+    "properties": "Properties",
+    "communities": "Communities",
+    "about": "About",
+    "services": "Services",
+    "investment": "Investment",
+    "contact": "Contact",
+    "bookConsultation": "Book Consultation",
+    "saved": "Saved"
+  },
+  "common": {
+    "explore": "Explore Properties",
+    "viewAll": "View All Properties",
+    "viewDetails": "View Details",
+    "bookFreeConsultation": "Book a Free Consultation",
+    "talkToAdvisor": "Talk to an Advisor",
+    "whatsapp": "WhatsApp",
+    "send": "Send",
+    "loading": "Loading",
+    "from": "From",
+    "properties": "properties",
+    "bed": "Bed",
+    "beds": "Beds",
+    "bath": "Bath",
+    "baths": "Baths",
+    "sqft": "Sq Ft",
+    "perSqft": "per sq ft"
+  },
+  "home": {
+    "eyebrow": "REAL ESTATE WITH",
+    "title": "CLARITY & CARE",
+    "subtitle": "We help you find, invest and grow with confidence in Dubai's most prime locations.",
+    "watchVideo": "Watch Video",
+    "searchLocation": "Location",
+    "searchType": "Property Type",
+    "searchPrice": "Price Range",
+    "searchCta": "Search Properties",
+    "featuredEyebrow": "FEATURED",
+    "featuredTitle": "PROPERTIES",
+    "numbersTitle": "PREMORA IN NUMBERS",
+    "whyEyebrow": "WHY CHOOSE",
+    "whyTitle": "PREMORA",
+    "communitiesEyebrow": "EXPLORE",
+    "communitiesTitle": "Prime Communities",
+    "testimonialsEyebrow": "CLIENT VOICES",
+    "testimonialsTitle": "Trusted With Their Future",
+    "ctaTitle": "Begin Your Dubai Property Journey",
+    "ctaSubtitle": "Speak with a Premora advisor for a clear, no-pressure consultation tailored to your goals."
+  },
+  "properties": {
+    "eyebrow": "BROWSE",
+    "title": "Properties in Dubai",
+    "bedrooms": "Bedrooms",
+    "reset": "Reset",
+    "resultsFound": "{count, plural, =0 {No properties found} one {# property found} other {# properties found}}",
+    "sort": "Sort",
+    "saveSearch": "Save Search",
+    "searchSaved": "Search Saved",
+    "grid": "Grid",
+    "map": "Map",
+    "emptyTitle": "No properties match your filters",
+    "emptyBody": "Try adjusting your search criteria.",
+    "mapPreview": "DUBAI · INTERACTIVE MAP",
+    "view": "View"
+  },
+  "sort": {
+    "featured": "Featured",
+    "priceAsc": "Price: Low to High",
+    "priceDesc": "Price: High to Low",
+    "newest": "Newest",
+    "largest": "Largest"
+  },
+  "detail": {
+    "back": "Back to Properties",
+    "about": "About this property",
+    "features": "Features & Amenities",
+    "yourAdvisor": "YOUR ADVISOR",
+    "requestViewing": "Request a Viewing",
+    "whatsappAdvisor": "WhatsApp Advisor",
+    "estimateMortgage": "Estimate your mortgage",
+    "estimateNote": "Based on a 20% down payment over 25 years.",
+    "openCalculator": "Open Full Calculator",
+    "similar": "Similar Properties",
+    "perMonth": "/mo"
+  },
+  "footer": {
+    "blurb": "Dubai real estate with clarity and care. Helping residents and investors find, invest and grow with confidence.",
+    "explore": "EXPLORE",
+    "services": "SERVICES",
+    "stayInformed": "STAY INFORMED",
+    "newsletterNote": "New listings and market insights, monthly.",
+    "join": "Join",
+    "subscribed": "You're subscribed — welcome.",
+    "rights": "© 2026 Premora Realty. All rights reserved. · RERA ORN 00000",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "consultation": {
+    "title": "Free Consultation",
+    "subtitle": "Tell us about your goals and a Premora advisor will reach out within one business day.",
+    "name": "Full Name",
+    "phone": "Phone",
+    "email": "Email",
+    "message": "Message",
+    "interest": "I'm interested in",
+    "submit": "Request Consultation",
+    "successTitle": "Thank you",
+    "successBody": "Your consultation request is in. We'll call you shortly.",
+    "close": "Close"
+  },
+  "whatsapp": {
+    "label": "Chat with us"
+  }
+}

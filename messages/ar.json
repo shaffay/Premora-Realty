@@ -1,0 +1,121 @@
+{
+  "brand": {
+    "name": "بريمورا",
+    "tagline": "وضوح وعناية",
+    "phone": "+971 50 123 4567"
+  },
+  "nav": {
+    "home": "الرئيسية",
+    "properties": "العقارات",
+    "communities": "المجتمعات",
+    "about": "من نحن",
+    "services": "الخدمات",
+    "investment": "الاستثمار",
+    "contact": "تواصل",
+    "bookConsultation": "احجز استشارة",
+    "saved": "المحفوظة"
+  },
+  "common": {
+    "explore": "استكشف العقارات",
+    "viewAll": "عرض كل العقارات",
+    "viewDetails": "عرض التفاصيل",
+    "bookFreeConsultation": "احجز استشارة مجانية",
+    "talkToAdvisor": "تحدث مع مستشار",
+    "whatsapp": "واتساب",
+    "send": "إرسال",
+    "loading": "جارٍ التحميل",
+    "from": "من",
+    "properties": "عقارات",
+    "bed": "غرفة",
+    "beds": "غرف",
+    "bath": "حمام",
+    "baths": "حمامات",
+    "sqft": "قدم مربع",
+    "perSqft": "للقدم المربع"
+  },
+  "home": {
+    "eyebrow": "عقارات مع",
+    "title": "وضوح وعناية",
+    "subtitle": "نساعدك على الإيجاد والاستثمار والنمو بثقة في أرقى مواقع دبي.",
+    "watchVideo": "شاهد الفيديو",
+    "searchLocation": "الموقع",
+    "searchType": "نوع العقار",
+    "searchPrice": "نطاق السعر",
+    "searchCta": "ابحث عن العقارات",
+    "featuredEyebrow": "مميزة",
+    "featuredTitle": "عقارات",
+    "numbersTitle": "بريمورا بالأرقام",
+    "whyEyebrow": "لماذا تختار",
+    "whyTitle": "بريمورا",
+    "communitiesEyebrow": "استكشف",
+    "communitiesTitle": "أرقى المجتمعات",
+    "testimonialsEyebrow": "آراء العملاء",
+    "testimonialsTitle": "ائتمنونا على مستقبلهم",
+    "ctaTitle": "ابدأ رحلتك العقارية في دبي",
+    "ctaSubtitle": "تحدث مع مستشار بريمورا لاستشارة واضحة وبلا ضغط مصممة لأهدافك."
+  },
+  "properties": {
+    "eyebrow": "تصفح",
+    "title": "عقارات في دبي",
+    "bedrooms": "غرف النوم",
+    "reset": "إعادة تعيين",
+    "resultsFound": "{count, plural, =0 {لا توجد عقارات} other {# عقار}}",
+    "sort": "ترتيب",
+    "saveSearch": "حفظ البحث",
+    "searchSaved": "تم حفظ البحث",
+    "grid": "شبكة",
+    "map": "خريطة",
+    "emptyTitle": "لا توجد عقارات تطابق عوامل التصفية",
+    "emptyBody": "حاول تعديل معايير البحث.",
+    "mapPreview": "دبي · خريطة تفاعلية",
+    "view": "عرض"
+  },
+  "sort": {
+    "featured": "مميزة",
+    "priceAsc": "السعر: من الأقل للأعلى",
+    "priceDesc": "السعر: من الأعلى للأقل",
+    "newest": "الأحدث",
+    "largest": "الأكبر"
+  },
+  "detail": {
+    "back": "العودة إلى العقارات",
+    "about": "عن هذا العقار",
+    "features": "المميزات والمرافق",
+    "yourAdvisor": "مستشارك",
+    "requestViewing": "اطلب معاينة",
+    "whatsappAdvisor": "واتساب المستشار",
+    "estimateMortgage": "احسب الرهن العقاري",
+    "estimateNote": "بناءً على دفعة أولى 20٪ على مدى 25 عامًا.",
+    "openCalculator": "افتح الحاسبة الكاملة",
+    "similar": "عقارات مشابهة",
+    "perMonth": "/شهر"
+  },
+  "footer": {
+    "blurb": "عقارات دبي بوضوح وعناية. نساعد المقيمين والمستثمرين على الإيجاد والاستثمار والنمو بثقة.",
+    "explore": "استكشف",
+    "services": "الخدمات",
+    "stayInformed": "ابقَ على اطلاع",
+    "newsletterNote": "قوائم جديدة ورؤى السوق، شهريًا.",
+    "join": "انضم",
+    "subscribed": "تم اشتراكك — أهلاً بك.",
+    "rights": "© 2026 بريمورا العقارية. جميع الحقوق محفوظة. · RERA ORN 00000",
+    "privacy": "سياسة الخصوصية",
+    "terms": "شروط الخدمة"
+  },
+  "consultation": {
+    "title": "استشارة مجانية",
+    "subtitle": "أخبرنا عن أهدافك وسيتواصل معك مستشار بريمورا خلال يوم عمل واحد.",
+    "name": "الاسم الكامل",
+    "phone": "الهاتف",
+    "email": "البريد الإلكتروني",
+    "message": "الرسالة",
+    "interest": "أنا مهتم بـ",
+    "submit": "اطلب استشارة",
+    "successTitle": "شكرًا لك",
+    "successBody": "تم استلام طلب استشارتك. سنتصل بك قريبًا.",
+    "close": "إغلاق"
+  },
+  "whatsapp": {
+    "label": "تحدث معنا"
+  }
+}
