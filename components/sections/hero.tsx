@@ -31,8 +31,8 @@ export function Hero() {
       <div className="absolute inset-0 -z-20 bg-base" />
       <motion.div style={{ y }} className="absolute inset-0 -z-10 h-[115%]">
         <Image
-          src="/images/hero-skyline.jpg"
-          alt="The Dubai skyline at golden hour with the Burj Khalifa"
+          src="/images/hero-skyline.webp"
+          alt="The Dubai Business Bay skyline at dusk with the Burj Khalifa reflected on the water"
           fill
           priority
           sizes="100vw"
