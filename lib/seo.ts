@@ -5,7 +5,7 @@ export function organizationJsonLd(siteUrl: string) {
   return {
     '@context': 'https://schema.org',
     '@type': 'RealEstateAgent',
-    name: 'Premora Realty',
+    name: 'PREMORA Realty',
     description:
       'Dubai real estate consultancy — real estate with clarity and care.',
     url: siteUrl,

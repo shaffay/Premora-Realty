@@ -44,12 +44,14 @@ export function ContactForm() {
         <span className="grid h-14 w-14 place-items-center rounded-full bg-burgundy-gold">
           <CheckCircle2 className="h-7 w-7 text-warm" />
         </span>
-        <h3 className="font-serif text-2xl text-warm">Message received</h3>
-        <p className="max-w-sm text-sm text-muted">
-          A Premora advisor will be in touch within one business day.
+        <h3 className="font-serif text-2xl text-warm">Thank you</h3>
+        <p className="max-w-md text-sm leading-relaxed text-muted">
+          Your message has been received. A PREMORA Advisor will contact you
+          within one business day. If your enquiry is urgent, you can also reach
+          us directly by phone or WhatsApp.
         </p>
         <Button variant="outline" onClick={() => setSubmitted(false)}>
-          Send another
+          Submit Another Request
         </Button>
       </motion.div>
     );
@@ -71,9 +73,14 @@ export function ContactForm() {
         <Field label="Full Name" htmlFor="ct-name" error={errors.name?.message}>
           <Input id="ct-name" autoComplete="name" {...register('name')} />
         </Field>
-        <Field label="Phone" htmlFor="ct-phone" error={errors.phone?.message}>
+        <Field
+          label="Phone / WhatsApp"
+          htmlFor="ct-phone"
+          error={errors.phone?.message}
+        >
           <Input
             id="ct-phone"
+            placeholder="Include your country code"
             autoComplete="tel"
             inputMode="tel"
             {...register('phone')}
@@ -91,7 +98,7 @@ export function ContactForm() {
       <Field label="Message" htmlFor="ct-message" error={errors.message?.message}>
         <Textarea
           id="ct-message"
-          placeholder="How can we help?"
+          placeholder="Tell us what you’re looking for. Buying, selling, investing, leasing or simply exploring your options."
           {...register('message')}
         />
       </Field>
@@ -103,6 +110,10 @@ export function ContactForm() {
         )}
         {isSubmitting ? 'Sending…' : 'Send Message'}
       </Button>
+      <p className="text-center text-xs leading-relaxed text-dim">
+        We’ll respond within one business day. Your information is never shared
+        with third parties.
+      </p>
     </form>
   );
 }

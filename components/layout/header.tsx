@@ -47,7 +47,7 @@ export function Header() {
         )}
       >
         <Container className="flex items-center justify-between gap-4">
-          <Link href="/" aria-label="Premora Realty home">
+          <Link href="/" aria-label="PREMORA Realty home">
             <Logo size={scrolled ? 40 : 44} />
           </Link>
 
@@ -60,7 +60,7 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  'relative rounded-full px-3.5 py-2 text-sm font-medium transition',
+                  'relative whitespace-nowrap rounded-full px-3 py-2 text-sm font-medium transition',
                   isActive(item.href)
                     ? 'text-gold'
                     : 'text-body hover:text-warm',

@@ -37,7 +37,7 @@ export async function generateMetadata({
     description: property.description.slice(0, 160),
     alternates: { canonical: `/properties/${property.slug}` },
     openGraph: {
-      title: `${property.title} — ${property.community} · Premora Realty`,
+      title: `${property.title} — ${property.community} · PREMORA Realty`,
       description: property.description.slice(0, 160),
       type: 'website',
     },

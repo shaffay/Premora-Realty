@@ -6,7 +6,7 @@ import { SavedView } from '@/components/property/saved-view';
 
 export const metadata: Metadata = {
   title: 'Saved',
-  description: 'Your saved Premora properties, searches and recently viewed homes.',
+  description: 'Your saved PREMORA Realty properties, searches and recently viewed homes.',
   robots: { index: false },
   alternates: { canonical: '/saved' },
 };
@@ -22,8 +22,8 @@ export default function SavedPage({
     <>
       <PageHeader
         eyebrow="YOUR SHORTLIST"
-        title="Saved & recently viewed"
-        description="Everything you’ve favourited, searched and explored — in one place, on this device."
+        title="Your Saved & Recently Viewed Properties"
+        description="Keep track of your saved properties, recently viewed listings and compare your favourite opportunities whenever you’re ready."
         hue={340}
       />
       <Container className="py-8">

@@ -14,6 +14,7 @@ export async function sendLeadNotification(lead: LeadInput): Promise<void> {
       name: lead.name,
       email: lead.email,
       phone: lead.phone,
+      country: lead.country,
       interest: lead.interest,
       source: lead.source,
     });
@@ -28,13 +29,14 @@ export async function sendLeadNotification(lead: LeadInput): Promise<void> {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'Premora Realty <leads@premora.ae>',
+        from: 'PREMORA Realty <leads@premora.ae>',
         to,
         subject: `New lead: ${lead.name} (${lead.interest ?? 'enquiry'})`,
         text: [
           `Name: ${lead.name}`,
           `Email: ${lead.email}`,
-          `Phone: ${lead.phone}`,
+          `Phone / WhatsApp: ${lead.phone}`,
+          `Country / Time zone: ${lead.country || '—'}`,
           `Interest: ${lead.interest ?? '—'}`,
           `Source: ${lead.source ?? '—'}`,
           '',

@@ -5,7 +5,9 @@ import { useLocale, useTranslations } from 'next-intl';
 import { Download, MessageSquare } from 'lucide-react';
 import { Slider } from '@/components/ui/slider';
 import { Button } from '@/components/ui/button';
+import { InfoTip } from '@/components/ui/info-tip';
 import { BookConsultationButton } from '@/components/layout/book-consultation-button';
+import { cn } from '@/lib/utils';
 import {
   calculateMortgage,
   calculateRoi,
@@ -67,7 +69,7 @@ export function MortgageCalculator({
 
   function downloadSummary() {
     const lines = [
-      'Premora Realty — Mortgage & ROI Summary',
+      'PREMORA Realty — Investment Summary',
       '========================================',
       `Property price:      ${formatPrice(price, locale)}`,
       `Down payment (${down}%): ${formatPrice(result.downPayment, locale)}`,
@@ -78,17 +80,17 @@ export function MortgageCalculator({
       `Monthly payment:     ${formatPrice(result.monthlyPayment, locale)}`,
       `Total interest:      ${formatPrice(result.totalInterest, locale)}`,
       '',
-      `Est. gross yield:    ${DEFAULT_YIELD_PCT}%`,
+      `Gross rental yield:  ${DEFAULT_YIELD_PCT}%`,
       `Est. annual rent:    ${formatPrice(roi.annualRent, locale)}`,
-      `Cash-on-cash return: ${coc.toFixed(1)}%`,
+      `Cash-on-cash return: ${formatSignedPct(coc)}`,
       '',
-      'Indicative only — not a financial offer. Speak to a Premora advisor.',
+      'Indicative only — not a financial offer. Speak to a PREMORA Advisor.',
     ];
     const blob = new Blob([lines.join('\n')], { type: 'text/plain' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'premora-mortgage-summary.txt';
+    a.download = 'premora-investment-summary.txt';
     a.click();
     URL.revokeObjectURL(url);
   }
@@ -141,38 +143,65 @@ export function MortgageCalculator({
 
       {/* Results */}
       <div className="flex flex-col gap-4 rounded-2xl border border-gold/20 bg-gradient-to-br from-primary-deep/50 to-deeper p-6">
-        <span className="eyebrow text-gold/70">Estimated Monthly Payment</span>
+        <span className="eyebrow flex items-center gap-1.5 text-gold/70">
+          Estimated Monthly Payment
+          <InfoTip
+            label="Estimated Monthly Payment"
+            text="Estimated monthly mortgage repayment based on your financing assumptions."
+          />
+        </span>
         <p className="font-serif text-5xl font-semibold text-gold">
           {formatPrice(result.monthlyPayment, locale)}
         </p>
         <div className="my-2 h-px w-full bg-gold/15" />
         <dl className="grid grid-cols-2 gap-4 text-sm">
-          <Stat label="Loan Amount" value={formatPrice(result.loanAmount, locale)} />
+          <Stat
+            label="Loan Amount"
+            value={formatPrice(result.loanAmount, locale)}
+            tip="Amount financed after your down payment."
+          />
           <Stat
             label="Down Payment"
             value={formatPrice(result.downPayment, locale)}
           />
-          <Stat label="Est. Rental Yield" value={`${DEFAULT_YIELD_PCT}%`} />
+          <Stat
+            label="Gross Rental Yield"
+            value={`${DEFAULT_YIELD_PCT}%`}
+            tip="Estimated annual rental income expressed as a percentage of the property’s purchase price."
+          />
           <Stat label="Est. Annual Rent" value={formatPrice(roi.annualRent, locale)} />
           <Stat
             label="Total Interest"
             value={formatPrice(result.totalInterest, locale)}
           />
-          <Stat label="Cash-on-Cash" value={`${coc.toFixed(1)}%`} />
+          <Stat
+            label="Cash-on-Cash Return"
+            value={formatSignedPct(coc)}
+            tip="The annual return generated on the actual cash you invest (such as your down payment and purchase costs), before considering appreciation."
+            tone={coc < 0 ? 'negative' : 'positive'}
+          />
         </dl>
+
+        {coc < 0 && (
+          <p className="text-xs leading-relaxed text-burgundy-bright">
+            Over a {term}-year term the mortgage repayments exceed the estimated
+            rent, so this scenario is cash-flow negative. Lengthening the term or
+            raising the down payment improves it.
+          </p>
+        )}
 
         <div className="mt-auto flex flex-col gap-2.5 pt-2">
           <BookConsultationButton
             variant="gold"
             size="lg"
-            defaultInterest="Investment & yield"
+            defaultInterest="Buy for investment"
           >
             <MessageSquare className="h-4 w-4" />
-            Talk to an Investment Advisor
+            Speak to an Investment Advisor
           </BookConsultationButton>
           <Button variant="outline" size="md" onClick={downloadSummary}>
             <Download className="h-4 w-4" />
-            Download Summary
+            Download Investment Summary
           </Button>
         </div>
       </div>
@@ -217,11 +246,42 @@ function SliderRow({
   );
 }
 
-function Stat({ label, value }: { label: string; value: string }) {
+/**
+ * Percentage with an explicit sign, so a cash-flow-negative scenario reads as
+ * deliberate rather than looking like a rendering glitch. Rounds -0.04 to 0.0%
+ * instead of the misleading "-0.0%".
+ */
+function formatSignedPct(value: number): string {
+  const rounded = Number(value.toFixed(1));
+  if (rounded === 0) return '0.0%';
+  return `${rounded > 0 ? '+' : '−'}${Math.abs(rounded).toFixed(1)}%`;
+}
+
+function Stat({
+  label,
+  value,
+  tip,
+  tone = 'neutral',
+}: {
+  label: string;
+  value: string;
+  tip?: string;
+  tone?: 'neutral' | 'positive' | 'negative';
+}) {
   return (
     <div className="flex flex-col gap-0.5">
-      <dt className="text-xs uppercase tracking-wider text-dim">{label}</dt>
-      <dd className="font-serif text-xl text-warm">{value}</dd>
+      <dt className="flex items-center gap-1.5 text-xs uppercase tracking-wider text-dim">
+        {label}
+        {tip && <InfoTip label={label} text={tip} />}
+      </dt>
+      <dd
+        className={cn(
+          'font-serif text-xl',
+          tone === 'negative' ? 'text-burgundy-bright' : 'text-warm',
+        )}
+      >
+        {value}
+      </dd>
     </div>
   );
 }

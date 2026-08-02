@@ -53,8 +53,22 @@ export function CommunityCard({
               {community.blurb}
             </p>
           )}
+          {community.tags.length > 0 && (
+            <ul className="mt-3 flex flex-wrap gap-1.5">
+              {community.tags.map((tag) => (
+                <li
+                  key={tag}
+                  className="rounded-full border border-gold/30 bg-black/35 px-2.5 py-1 text-[0.68rem] font-medium tracking-wide text-gold/95 backdrop-blur-sm transition group-hover:border-gold/55"
+                >
+                  {tag}
+                </li>
+              ))}
+            </ul>
+          )}
           <div className="mt-3 flex items-center gap-4 text-xs text-gold/90">
-            <span>{community.count} properties</span>
+            <span>
+              {community.count} {community.count === 1 ? 'Property' : 'Properties'}
+            </span>
             <span className="h-1 w-1 rounded-full bg-gold/50" />
             <span>From {formatPriceShort(community.fromPrice, locale)}</span>
           </div>

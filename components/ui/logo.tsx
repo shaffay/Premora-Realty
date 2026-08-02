@@ -21,7 +21,7 @@ export function Logo({
       >
         <Image
           src="/logo-monogram.png"
-          alt="Premora Realty"
+          alt="PREMORA Realty"
           fill
           sizes="44px"
           className="object-cover"

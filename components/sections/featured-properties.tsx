@@ -5,7 +5,7 @@ import { Container } from '@/components/ui/container';
 import { SectionHeading } from '@/components/ui/section-heading';
 import { Button } from '@/components/ui/button';
 import { PropertyCard } from '@/components/property/property-card';
-import { StatsPanel } from './stats-panel';
+import { GoalsPanel } from './goals-panel';
 import { featuredProperties } from '@/data/properties';
 
 export function FeaturedProperties() {
@@ -36,7 +36,7 @@ export function FeaturedProperties() {
             ))}
           </div>
           <div className="lg:col-span-1">
-            <StatsPanel />
+            <GoalsPanel />
           </div>
         </div>
 

@@ -45,7 +45,7 @@ export const WHATSAPP_DEFAULT = '971501234567';
 
 export function whatsappLink(
   number = WHATSAPP_DEFAULT,
-  message = 'Hello Premora, I would like to learn more about a property.',
+  message = 'Hello PREMORA Realty, I would like to learn more about a property.',
 ): string {
   return `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
 }

@@ -39,7 +39,7 @@ export function CookieNotice() {
         >
           <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center">
             <p className="flex-1 text-xs leading-relaxed text-muted">
-              We use essential cookies to make Premora work and to understand how
+              We use essential cookies to make PREMORA Realty work and to understand how
               the site is used. By continuing you agree to our use of cookies.
             </p>
             <div className="flex gap-2">

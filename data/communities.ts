@@ -12,6 +12,7 @@ const raw: Community[] = [
     lat: 25.1972,
     lng: 55.2744,
     image: '/images/burj-khalifa.jpg',
+    tags: ['Best for Investment', 'High Rental Demand'],
   },
   {
     slug: 'dubai-marina',
@@ -24,6 +25,7 @@ const raw: Community[] = [
     lat: 25.0805,
     lng: 55.1403,
     image: '/images/marina.jpg',
+    tags: ['Waterfront Living', 'High Rental Demand'],
   },
   {
     slug: 'palm-jumeirah',
@@ -36,6 +38,7 @@ const raw: Community[] = [
     lat: 25.1124,
     lng: 55.139,
     image: '/images/palm.jpg',
+    tags: ['Waterfront Living', 'Luxury Living'],
   },
   {
     slug: 'jvc',
@@ -48,6 +51,7 @@ const raw: Community[] = [
     lat: 25.059,
     lng: 55.209,
     image: '/images/apt-building.jpg',
+    tags: ['Entry-Level Buyers', 'High Rental Demand'],
   },
   {
     slug: 'business-bay',
@@ -60,6 +64,7 @@ const raw: Community[] = [
     lat: 25.185,
     lng: 55.265,
     image: '/images/dubai-aerial.jpg',
+    tags: ['Best for Investment', 'High Rental Demand'],
   },
   {
     slug: 'dubai-hills',
@@ -72,6 +77,7 @@ const raw: Community[] = [
     lat: 25.11,
     lng: 55.248,
     image: '/images/house-ext.jpg',
+    tags: ['Best for Families', 'Luxury Villas'],
   },
   {
     slug: 'emaar-beachfront',
@@ -84,6 +90,7 @@ const raw: Community[] = [
     lat: 25.095,
     lng: 55.145,
     image: '/images/house-modern2.jpg',
+    tags: ['Waterfront Living', 'Best for Investment'],
   },
   {
     slug: 'emirates-hills',
@@ -96,6 +103,7 @@ const raw: Community[] = [
     lat: 25.066,
     lng: 55.162,
     image: '/images/house-modern.jpg',
+    tags: ['Luxury Villas', 'Best for Families'],
   },
   {
     slug: 'creek-harbour',
@@ -108,6 +116,7 @@ const raw: Community[] = [
     lat: 25.203,
     lng: 55.353,
     image: '/images/apt-building2.jpg',
+    tags: ['Waterfront Living', 'Best for Families'],
   },
   {
     slug: 'city-walk',
@@ -120,6 +129,7 @@ const raw: Community[] = [
     lat: 25.205,
     lng: 55.262,
     image: '/images/loft.jpg',
+    tags: ['Urban Lifestyle', 'High Rental Demand'],
   },
 ];
 

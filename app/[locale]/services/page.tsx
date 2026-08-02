@@ -9,7 +9,7 @@ import { ServiceList } from '@/components/sections/service-list';
 export const metadata: Metadata = {
   title: 'Services',
   description:
-    'Buying, selling, leasing, investment advisory, property management and mortgage assistance — end-to-end property services from Premora Realty.',
+    'Buying, selling, leasing, investment advisory, property management and mortgage assistance — end-to-end property services from PREMORA Realty.',
   alternates: { canonical: '/services' },
 };
 
@@ -25,7 +25,7 @@ export default function ServicesPage({
       <PageHeader
         eyebrow="WHAT WE DO"
         title="End-to-end property services"
-        description="Whatever your goal, a dedicated Premora advisor guides you from first conversation to final handover."
+        description="Whether you are buying, selling, renting, or investing, a PREMORA Realty advisor helps you understand your options and move forward with confidence."
         hue={150}
       />
 
@@ -38,10 +38,14 @@ export default function ServicesPage({
           <div className="pointer-events-none absolute inset-0 bg-radial-glow opacity-70" />
           <div className="relative mx-auto flex max-w-2xl flex-col items-center gap-5">
             <h2 className="text-balance font-serif text-3xl sm:text-4xl">
-              Not sure where to start? Book a free consultation and we’ll map out
-              your options.
+              Not sure where to start? Book a free consultation and a PREMORA
+              Realty advisor will help you understand your options.
             </h2>
-            <BookConsultationButton variant="gold" size="lg" />
+            <BookConsultationButton
+              variant="gold"
+              size="lg"
+              label="Book Free Consultation"
+            />
           </div>
         </Reveal>
       </Container>

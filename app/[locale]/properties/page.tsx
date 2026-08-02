@@ -21,7 +21,7 @@ export async function generateMetadata({
   return {
     title: t('title'),
     description:
-      'Browse Premora’s curated portfolio of apartments, villas, penthouses and townhouses across Dubai’s most prime communities.',
+      'Browse PREMORA Realty’s curated portfolio of apartments, villas, penthouses and townhouses across Dubai’s most prime communities.',
     alternates: { canonical: '/properties' },
   };
 }

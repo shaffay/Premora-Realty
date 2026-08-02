@@ -48,9 +48,10 @@ export function SavedView() {
             <span className="grid h-14 w-14 place-items-center rounded-full bg-burgundy/15 text-burgundy-bright">
               <SearchX className="h-6 w-6" />
             </span>
-            <p className="text-muted">
-              You haven’t saved any properties yet. Tap the heart on any listing to
-              keep it here.
+            <p className="max-w-md leading-relaxed text-muted">
+              You haven’t saved any properties yet. Tap the heart icon on any
+              listing to build your personal shortlist and compare your favourite
+              properties later.
             </p>
             <Button asChild variant="gold" size="md">
               <Link href="/properties">

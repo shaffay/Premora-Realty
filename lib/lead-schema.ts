@@ -8,6 +8,8 @@ export const leadSchema = z.object({
     .max(24)
     .regex(/^[+\d\s()-]+$/, 'Please enter a valid phone number'),
   email: z.string().email('Please enter a valid email'),
+  /** Where the enquirer is based — lets an advisor call at a sensible hour. */
+  country: z.string().max(80).optional().or(z.literal('')),
   message: z.string().max(1000).optional().or(z.literal('')),
   interest: z.string().max(80).optional().or(z.literal('')),
   /** Context: which property / page the lead came from */

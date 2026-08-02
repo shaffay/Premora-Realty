@@ -93,6 +93,14 @@ export function Footer() {
       </Container>
 
       <div className="relative border-t border-gold/10">
+        <Container className="py-5">
+          <p className="max-w-4xl text-xs leading-relaxed text-dim">
+            {t('disclaimer')}
+          </p>
+        </Container>
+      </div>
+
+      <div className="relative border-t border-gold/10">
         <Container className="flex flex-col items-center justify-between gap-3 py-6 text-xs text-dim sm:flex-row">
           <p>{t('rights')}</p>
           <div className="flex gap-5">

@@ -35,8 +35,8 @@ export async function generateMetadata({
   return {
     metadataBase: new URL(SITE_URL),
     title: {
-      default: 'Premora Realty — Real Estate with Clarity & Care',
-      template: '%s · Premora Realty',
+      default: 'PREMORA Realty — Real Estate with Clarity & Care',
+      template: '%s · PREMORA Realty',
     },
     description: t('subtitle'),
     keywords: [
@@ -44,18 +44,18 @@ export async function generateMetadata({
       'luxury property Dubai',
       'buy property Dubai',
       'Dubai investment',
-      'Premora Realty',
+      'PREMORA Realty',
     ],
     openGraph: {
       type: 'website',
-      siteName: 'Premora Realty',
-      title: 'Premora Realty — Real Estate with Clarity & Care',
+      siteName: 'PREMORA Realty',
+      title: 'PREMORA Realty — Real Estate with Clarity & Care',
       description: t('subtitle'),
       locale: params.locale === 'ar' ? 'ar_AE' : 'en_AE',
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'Premora Realty — Real Estate with Clarity & Care',
+      title: 'PREMORA Realty — Real Estate with Clarity & Care',
       description: t('subtitle'),
     },
     alternates: {

@@ -65,6 +65,24 @@ export const AgentSchema = z.object({
 
 export type Agent = z.infer<typeof AgentSchema>;
 
+/**
+ * Controlled vocabulary for community cards — keeps the tag set small enough
+ * to stay meaningful and prevents one-off labels drifting in over time.
+ */
+export const communityTags = [
+  'Best for Investment',
+  'Best for Families',
+  'Waterfront Living',
+  'Luxury Villas',
+  'Luxury Living',
+  'Entry-Level Buyers',
+  'High Rental Demand',
+  'Urban Lifestyle',
+  'Central Location',
+] as const;
+
+export type CommunityTag = (typeof communityTags)[number];
+
 export const CommunitySchema = z.object({
   slug: z.string(),
   name: z.string(),
@@ -76,6 +94,8 @@ export const CommunitySchema = z.object({
   lng: z.number(),
   /** Path to the community photo (under /public). */
   image: z.string(),
+  /** Why this community matters — at most two, drawn from `communityTags`. */
+  tags: z.array(z.enum(communityTags)).max(2),
 });
 
 export type Community = z.infer<typeof CommunitySchema>;

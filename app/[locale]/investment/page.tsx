@@ -5,12 +5,13 @@ import { PageHeader } from '@/components/sections/page-header';
 import { SectionHeading } from '@/components/ui/section-heading';
 import { Reveal } from '@/components/ui/reveal';
 import { MortgageCalculator } from '@/components/sections/mortgage-calculator';
+import { InfoTip } from '@/components/ui/info-tip';
 import { investmentStats } from '@/data/site';
 
 export const metadata: Metadata = {
-  title: 'Investment',
+  title: 'Investment Planner',
   description:
-    'Model your Dubai property investment — tax-free returns, strong yields and a live mortgage & ROI calculator from Premora Realty.',
+    'Model your Dubai property investment — compare financing costs, rental income and long-term returns with the PREMORA Realty investment planner.',
   alternates: { canonical: '/investment' },
 };
 
@@ -39,9 +40,9 @@ export default function InvestmentPage({
   return (
     <>
       <PageHeader
-        eyebrow="INVEST WITH CONFIDENCE"
-        title="Grow your wealth in Dubai"
-        description="Tax-free returns, world-class infrastructure and strong rental yields. Use our calculator to model your numbers."
+        eyebrow="INVEST SMARTER"
+        title="Invest with Clarity. Grow with Confidence."
+        description="Compare financing costs, rental income, payment plans, and long-term returns before making your investment decision."
         hue={45}
       />
 
@@ -56,7 +57,10 @@ export default function InvestmentPage({
               <span className="font-serif text-4xl font-semibold text-gold">
                 {s.value}
               </span>
-              <span className="text-sm text-muted">{s.label}</span>
+              <span className="flex items-center gap-1.5 text-sm text-muted">
+                {s.label}
+                {s.note && <InfoTip label={s.label} text={s.note} />}
+              </span>
             </Reveal>
           ))}
         </div>
@@ -64,14 +68,16 @@ export default function InvestmentPage({
 
       <Container className="py-10">
         <SectionHeading
-          eyebrow="CALCULATOR"
-          title="Mortgage & ROI Calculator"
+          eyebrow="INVESTMENT PLANNER"
+          title="Mortgage, ROI and Investment Calculator"
           rule="burgundy-gold"
         />
-        <p className="mb-8 mt-3 max-w-2xl text-sm text-muted">
-          Adjust the sliders to estimate your monthly repayment, rental yield and
-          cash-on-cash return. Your inputs are saved to the URL — share or bookmark
-          your scenario.
+        <p className="mb-8 mt-3 max-w-2xl text-sm leading-relaxed text-muted">
+          Adjust the sliders to estimate your monthly payment, rental yield,
+          cash-on-cash return, and overall investment performance. Compare
+          different scenarios before making your investment decision. Your inputs
+          are automatically saved to the URL so you can bookmark or share your
+          analysis.
         </p>
         <MortgageCalculator
           initialPrice={initialPrice}
@@ -81,7 +87,7 @@ export default function InvestmentPage({
         />
         <p className="mt-4 text-xs text-dim">
           Figures are indicative only and do not constitute a financial offer or
-          mortgage approval. Speak to a Premora advisor for tailored guidance.
+          mortgage approval. Speak to a PREMORA Advisor for tailored guidance.
         </p>
       </Container>
     </>

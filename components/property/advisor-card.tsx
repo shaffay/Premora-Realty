@@ -46,7 +46,7 @@ export function AdvisorCard({
             openConsultation({
               propertyTitle: property.title,
               agentId: agent.id,
-              defaultInterest: 'Buying a home',
+              defaultInterest: 'Buy for personal use',
             })
           }
         >

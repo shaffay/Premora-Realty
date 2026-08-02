@@ -7,9 +7,9 @@ import { CtaBand } from '@/components/sections/cta-band';
 import { communities } from '@/data/communities';
 
 export const metadata: Metadata = {
-  title: 'Prime Communities',
+  title: 'Explore Dubai Communities',
   description:
-    'Explore Dubai’s most sought-after neighbourhoods — from waterfront towers to family villa enclaves — with Premora Realty.',
+    'Explore the Dubai communities that match your lifestyle, budget and investment goals — from waterfront towers to family villa enclaves.',
   alternates: { canonical: '/communities' },
 };
 
@@ -24,8 +24,8 @@ export default function CommunitiesPage({
     <>
       <PageHeader
         eyebrow="DUBAI"
-        title="Prime Communities"
-        description="From waterfront towers to family villa enclaves — explore the neighbourhoods Premora knows best."
+        title="Explore Dubai Communities"
+        description="From waterfront towers to family villa enclaves, explore the communities that match your lifestyle, budget, and investment goals."
         hue={195}
       />
       <Container className="py-8">

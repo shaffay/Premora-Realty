@@ -65,11 +65,11 @@ export function ConsultationForm({
         </span>
         <h3 className="text-2xl">Thank you</h3>
         <p className="max-w-sm text-sm text-muted">
-          Your consultation request is in. A Premora advisor will call you
-          shortly.
+          Your consultation request has been received. A PREMORA Realty advisor
+          will contact you shortly.
         </p>
         <Button variant="outline" onClick={() => setSubmitted(false)}>
-          Send another
+          Submit Another Request
         </Button>
       </motion.div>
     );
@@ -96,10 +96,14 @@ export function ConsultationForm({
             {...register('name')}
           />
         </Field>
-        <Field label="Phone" htmlFor="c-phone" error={errors.phone?.message}>
+        <Field
+          label="Phone / WhatsApp"
+          htmlFor="c-phone"
+          error={errors.phone?.message}
+        >
           <Input
             id="c-phone"
-            placeholder="+971 50 000 0000"
+            placeholder="Include your country code, e.g. +44 7700 900000"
             autoComplete="tel"
             inputMode="tel"
             {...register('phone')}
@@ -107,15 +111,29 @@ export function ConsultationForm({
         </Field>
       </div>
 
-      <Field label="Email" htmlFor="c-email" error={errors.email?.message}>
-        <Input
-          id="c-email"
-          type="email"
-          placeholder="you@email.com"
-          autoComplete="email"
-          {...register('email')}
-        />
-      </Field>
+      <div className={compact ? 'grid gap-4' : 'grid gap-4 sm:grid-cols-2'}>
+        <Field label="Email" htmlFor="c-email" error={errors.email?.message}>
+          <Input
+            id="c-email"
+            type="email"
+            placeholder="you@email.com"
+            autoComplete="email"
+            {...register('email')}
+          />
+        </Field>
+        <Field
+          label="Country / Time Zone"
+          htmlFor="c-country"
+          error={errors.country?.message}
+        >
+          <Input
+            id="c-country"
+            placeholder="e.g. United Kingdom (GMT)"
+            autoComplete="country-name"
+            {...register('country')}
+          />
+        </Field>
+      </div>
 
       <Field label="I'm interested in" htmlFor="c-interest">
         <select
@@ -134,7 +152,7 @@ export function ConsultationForm({
       <Field label="Message" htmlFor="c-message" error={errors.message?.message}>
         <Textarea
           id="c-message"
-          placeholder="Tell us about your goals (optional)"
+          placeholder="Tell us about your goal, preferred area, budget, or timeline (optional)"
           {...register('message')}
         />
       </Field>
