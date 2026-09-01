@@ -20,7 +20,7 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://premora.ae';
+import { SITE_URL } from '@/lib/site-url';
 
 export async function generateMetadata({
   params,

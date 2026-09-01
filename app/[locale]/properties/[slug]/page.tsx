@@ -19,7 +19,7 @@ import { formatPrice, formatPricePerSqft } from '@/lib/format';
 import { realEstateListingJsonLd, breadcrumbJsonLd } from '@/lib/seo';
 import type { Locale } from '@/lib/i18n/routing';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://premora.ae';
+import { SITE_URL } from '@/lib/site-url';
 
 export function generateStaticParams() {
   return properties.map((p) => ({ slug: p.slug }));

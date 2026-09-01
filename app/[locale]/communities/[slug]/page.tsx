@@ -13,7 +13,7 @@ import { formatPriceShort } from '@/lib/format';
 import { breadcrumbJsonLd } from '@/lib/seo';
 import type { Locale } from '@/lib/i18n/routing';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://premora.ae';
+import { SITE_URL } from '@/lib/site-url';
 
 export function generateStaticParams() {
   return communities.map((c) => ({ slug: c.slug }));

@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 import { properties } from '@/data/properties';
 import { communities } from '@/data/communities';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://premora.ae';
+import { SITE_URL } from '@/lib/site-url';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
